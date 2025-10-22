@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Heart, ShoppingBag } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useCart } from "@/components/cart-provider"
 
 interface ProductCardProps {
   id: string
@@ -17,6 +18,7 @@ interface ProductCardProps {
 export default function ProductCard({ id, name, price, image, category, rating = 4.5, reviews = 0 }: ProductCardProps) {
   const [isFavorite, setIsFavorite] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
+  const { addItem } = useCart()
 
   return (
     <div className="group animate-fade-in">
@@ -35,8 +37,9 @@ export default function ProductCard({ id, name, price, image, category, rating =
         {/* Overlay Actions */}
         {isHovered && (
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center gap-3 transition-all duration-300 animate-fade-in">
-            <Button
+<Button
               size="sm"
+              onClick={() => addItem({ id, name, price, image })}
               className="bg-secondary text-secondary-foreground hover:bg-secondary/90 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
               <ShoppingBag className="w-4 h-4 mr-2" />

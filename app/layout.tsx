@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
+import { CartProvider } from "@/components/cart-provider"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
@@ -65,8 +66,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="font-sans antialiased">
-        {children}
-        <Analytics />
+        {/* Global providers */}
+        {/* CartProvider manages cart state and persistence */}
+        <CartProvider>
+          {children}
+          <Analytics />
+        </CartProvider>
       </body>
     </html>
   )

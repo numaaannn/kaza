@@ -3,9 +3,15 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Menu, X, ShoppingBag, Search } from "lucide-react"
+import { useCart } from "@/components/cart-provider"
+import CartDrawer from "@/components/cart-drawer"
+import dynamic from "next/dynamic"
+import SearchBar from "@/components/search-bar"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [showSearch, setShowSearch] = useState(false)
+  const { count, openCart } = useCart()
 
   const navLinks = [
     { label: "Shop", href: "/shop" },
@@ -39,14 +45,26 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Right Icons */}
+{/* Right Icons */}
           <div className="flex items-center gap-4">
-            <button className="p-2 hover:bg-muted rounded-lg transition-colors duration-300 hover:shadow-lg hover:-translate-y-1">
+            <button
+              onClick={() => setShowSearch(true)}
+              className="p-2 hover:bg-muted rounded-lg transition-colors duration-300 hover:shadow-lg hover:-translate-y-1"
+              aria-label="Search"
+            >
               <Search className="w-5 h-5 text-foreground" />
             </button>
-            <button className="p-2 hover:bg-muted rounded-lg transition-colors duration-300 hover:shadow-lg hover:-translate-y-1 relative">
+            <button
+              onClick={openCart}
+              className="p-2 hover:bg-muted rounded-lg transition-colors duration-300 hover:shadow-lg hover:-translate-y-1 relative"
+              aria-label="Open cart"
+            >
               <ShoppingBag className="w-5 h-5 text-foreground" />
-              <span className="absolute top-1 right-1 w-2 h-2 bg-accent rounded-full animate-pulse-soft"></span>
+              {count > 0 && (
+                <span className="absolute -top-1 -right-1 min-w-5 h-5 px-1 rounded-full bg-primary text-primary-foreground text-[10px] flex items-center justify-center">
+                  {count}
+                </span>
+              )}
             </button>
 
             {/* Mobile Menu Button */}
@@ -79,6 +97,16 @@ export default function Navbar() {
           </div>
         )}
       </div>
+
+      {/* Search Overlay */}
+      {showSearch && (
+        <div className="absolute inset-x-0 top-16 z-50 bg-background/95 backdrop-blur border-b border-border p-4">
+          <SearchBar onClose={() => setShowSearch(false)} />
+        </div>
+      )}
+
+      {/* Cart Drawer mounted here */}
+      <CartDrawer />
     </nav>
   )
 }
