@@ -9,7 +9,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  output: {
+  experimental: {
     outputFileTracingRoot: process.cwd(), // Explicitly set workspace root to silence warning
   },
 }
