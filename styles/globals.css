@@ -123,3 +123,39 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Hero carousel custom styles */
+@layer utilities {
+  .hero-carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* fill the viewport */
+    overflow: hidden;
+  }
+
+  /* ensure images cover and transitions are smooth */
+  .hero-carousel img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* make images cover the container */
+    object-position: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  /* if using absolutely positioned slides, ensure they fill the container */
+  .hero-carousel > * {
+    position: absolute;
+    inset: 0;
+  }
+
+  /* small helper for min height on smaller devices */
+  @screen sm {
+    .h\[600px\] { height: 520px; }
+  }
+
+  @screen md {
+    .h\[600px\] { height: 600px; }
+  }
+}
