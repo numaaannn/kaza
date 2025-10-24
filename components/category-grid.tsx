@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-const categories = [
+const categories: { id: number; name: string; image: string; href: string }[] = [
   {
     id: 1,
     name: "Rings",
@@ -27,15 +27,15 @@ const categories = [
   },
   {
     id: 5,
-    name: "Earings",
-    image: "/silver-bracelets-collection.jpg",
-    href: "/shop?category=bracelets",
+    name: "Earrings",
+    image: "/silver-earrings-collection.jpg",
+    href: "/shop?category=earrings",
   },
-   {
+  {
     id: 6,
-    name: "custom Jewelry",
-    image: "/silver-bracelets-collection.jpg",
-    href: "/shop?category=bracelets",
+    name: "Custom Jewelry",
+    image: "/silver-custom-collection.jpg",
+    href: "/shop?category=custom-jewelry",
   },
 ]
 
