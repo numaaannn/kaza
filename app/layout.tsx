@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { CartProvider } from "@/components/cart-provider"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
@@ -64,14 +65,21 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="font-sans antialiased">
-        {/* Global providers */}
-        {/* CartProvider manages cart state and persistence */}
-        <CartProvider>
-          {children}
-          <Analytics />
-        </CartProvider>
+    <html lang="en" suppressHydrationWarning className={inter.variable}>
+      <body className="font-sans antialiased bg-background text-foreground">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {/* Global providers */}
+          {/* CartProvider manages cart state and persistence */}
+          <CartProvider>
+            {children}
+            <Analytics />
+          </CartProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -14,8 +14,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <CategoryGrid />
-      <BrandStory />
       <BestsellersSlider />
+      <BrandStory />
       <TestimonialSlider />
       <InstagramStrip />
       <NewsletterBanner />

@@ -1,4 +1,9 @@
+
+// =============================
+// TSCONFIG.JSON - TypeScript Compiler Configuration
+// =============================
 {
+  // Compiler options for TypeScript
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -13,15 +18,19 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    // Plugins for Next.js
     "plugins": [
       {
         "name": "next"
       }
     ],
+    // Path aliases
     "paths": {
       "@/*": ["./*"]
     }
   },
+  // Files to include in the project
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  // Files to exclude from the project
   "exclude": ["node_modules"]
 }

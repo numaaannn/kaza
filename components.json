@@ -1,8 +1,17 @@
+
+// =============================
+// COMPONENTS.JSON - UI Library and Aliases Configuration
+// =============================
 {
+  // JSON schema for validation
   "$schema": "https://ui.shadcn.com/schema.json",
+  // UI style preset
   "style": "new-york",
+  // Enable React Server Components
   "rsc": true,
+  // Use TypeScript with JSX
   "tsx": true,
+  // Tailwind CSS configuration
   "tailwind": {
     "config": "",
     "css": "app/globals.css",
@@ -10,6 +19,7 @@
     "cssVariables": true,
     "prefix": ""
   },
+  // Path aliases for imports
   "aliases": {
     "components": "@/components",
     "utils": "@/lib/utils",
@@ -17,5 +27,6 @@
     "lib": "@/lib",
     "hooks": "@/hooks"
   },
+  // Icon library used
   "iconLibrary": "lucide"
 }

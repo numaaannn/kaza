@@ -19,7 +19,8 @@ const slides: Slide[] = [
 
 export default function Hero() {
   const [index, setIndex] = useState(0)
-  const [minHeight, setMinHeight] = useState<number>(600)
+  // allow mobile to flow naturally by default (0 = no forced min-height)
+  const [minHeight, setMinHeight] = useState<number>(0)
   const timeoutRef = useRef<number | null>(null)
   const delay = 5000
 
@@ -33,7 +34,13 @@ export default function Hero() {
     const update = () => {
       const nav = document.querySelector("nav") as HTMLElement | null
       const navH = nav ? Math.ceil(nav.getBoundingClientRect().height) : 64
-      const h = Math.max(600, window.innerHeight - navH)
+      // On small screens let the layout size naturally (no forced 100vh)
+      if (window.innerWidth < 768) {
+        setMinHeight(0)
+        return
+      }
+      // On desktop/tablet enforce a viewport-aware height but with a lower min
+      const h = Math.max(480, window.innerHeight - navH)
       setMinHeight(h)
     }
     update()
@@ -117,21 +124,25 @@ export default function Hero() {
 
             {/* reduce hero image height slightly so bottom is visible without scrolling */}
             <style>{`
-            /* subtract ~0.5cm from viewport height for hero images/overlays */
-            .hero-carousel .absolute.inset-0 img,
-            .hero-carousel > .relative img {
-              height: calc(100vh - 0.5cm) !important;
-              max-height: calc(100vh - 0.5cm) !important;
-            }
-            .hero-carousel .absolute.inset-0 > div,
-            .hero-carousel .absolute.inset-0 .bg-gradient-to-r {
-              height: calc(100vh - 0.5cm) !important;
-              max-height: calc(100vh - 0.5cm) !important;
-            }
-            /* ensure the hero container doesn't force full 100vh via earlier injected styles */
-            .hero-carousel {
-              min-height: calc(100vh - 0.5cm) !important;
-              height: calc(100vh - 0.5cm) !important;
+            /* Use the viewport-height sizing only on medium+ screens. On mobile
+               keep the hero flexible so content can stack and avoid vertical
+               overflow (browser UI, address bar, etc). */
+            @media (min-width: 768px) {
+              .hero-carousel .absolute.inset-0 img,
+              .hero-carousel > .relative img {
+                height: calc(100vh - 0.5cm) !important;
+                max-height: calc(100vh - 0.5cm) !important;
+              }
+              .hero-carousel .absolute.inset-0 > div,
+              .hero-carousel .absolute.inset-0 .bg-gradient-to-r {
+                height: calc(100vh - 0.5cm) !important;
+                max-height: calc(100vh - 0.5cm) !important;
+              }
+              /* ensure the hero container doesn't force full 100vh via earlier injected styles */
+              .hero-carousel {
+                min-height: calc(100vh - 0.5cm) !important;
+                height: calc(100vh - 0.5cm) !important;
+              }
             }
             `}</style>
         </div>
@@ -148,38 +159,34 @@ export default function Hero() {
   const style = document.createElement("style")
   style.id = id
   style.textContent = `
-    /* make the hero area fill the viewport */
-    .hero-carousel {
-      min-height: 100vh !important;
-      height: 100vh !important;
+    @media (min-width: 768px) {
+      .hero-carousel {
+        min-height: 100vh !important;
+        height: 100vh !important;
+        width: 100vw !important;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
+        left: 0;
+        right: 0;
+        position: relative;
+      }
 
-      /* stretch full viewport width and neutralize parent centering (removes left/right gaps) */
-      width: 100vw !important;
-      margin-left: calc(50% - 50vw) !important;
-      margin-right: calc(50% - 50vw) !important;
-      left: 0;
-      right: 0;
-      position: relative;
-    }
+      section.relative.overflow-hidden.bg-background { min-height: 100vh !important; }
 
-    /* ensure the section also doesn't limit height */
-    section.relative.overflow-hidden.bg-background { min-height: 100vh !important; }
+      .hero-carousel > .relative img,
+      .hero-carousel .absolute.inset-0 img {
+        width: 100vw !important;
+        height: 100vh !important;
+        object-fit: cover !important;
+        display: block;
+      }
 
-    /* make slide images cover the viewport as background */
-    .hero-carousel > .relative img,
-    .hero-carousel .absolute.inset-0 img {
-      width: 100vw !important;
-      height: 100vh !important;
-      object-fit: cover !important;
-      display: block;
-    }
-
-    /* keep the lighter overlay covering full viewport */
-    .hero-carousel .absolute.inset-0 > div,
-    .hero-carousel .absolute.inset-0 .bg-gradient-to-r {
-      height: 100vh !important;
-      width: 100vw !important;
-      left: 0;
+      .hero-carousel .absolute.inset-0 > div,
+      .hero-carousel .absolute.inset-0 .bg-gradient-to-r {
+        height: 100vh !important;
+        width: 100vw !important;
+        left: 0;
+      }
     }
   `
   document.head.appendChild(style)

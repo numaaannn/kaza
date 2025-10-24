@@ -1,12 +1,22 @@
+// =============================
+// VERCEL.JSON - Vercel Deployment Configuration
+// =============================
 {
+  // Build command for deployment
   "buildCommand": "npm run build",
+  // Output directory for build artifacts
   "outputDirectory": ".next",
+  // Framework used
   "framework": "nextjs",
+  // Install command for dependencies
   "installCommand": "npm install",
+  // Development command
   "devCommand": "npm run dev",
+  // Environment variables
   "env": {
     "NEXT_PUBLIC_SITE_URL": "https://kazajewels.com"
   },
+  // Custom HTTP headers
   "headers": [
     {
       "source": "/(.*)",
@@ -34,6 +44,7 @@
       ]
     }
   ],
+  // URL rewrites
   "rewrites": [
     {
       "source": "/sitemap.xml",

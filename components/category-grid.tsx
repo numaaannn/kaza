@@ -25,6 +25,18 @@ const categories = [
     image: "/silver-bracelets-collection.jpg",
     href: "/shop?category=bracelets",
   },
+  {
+    id: 5,
+    name: "Earings",
+    image: "/silver-bracelets-collection.jpg",
+    href: "/shop?category=bracelets",
+  },
+   {
+    id: 6,
+    name: "custom Jewelry",
+    image: "/silver-bracelets-collection.jpg",
+    href: "/shop?category=bracelets",
+  },
 ]
 
 export default function CategoryGrid() {

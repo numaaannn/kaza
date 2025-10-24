@@ -7,6 +7,7 @@ import { useCart } from "@/components/cart-provider"
 import CartDrawer from "@/components/cart-drawer"
 import dynamic from "next/dynamic"
 import SearchBar from "@/components/search-bar"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -66,6 +67,7 @@ export default function Navbar() {
                 </span>
               )}
             </button>
+            <ThemeToggle />
 
             {/* Mobile Menu Button */}
             <button
