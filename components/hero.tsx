@@ -69,9 +69,9 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-background">
       <div className="max-w-7xl mx-auto">
-        <div className="hero-carousel grid grid-cols-1 md:grid-cols-2 items-center" style={{ minHeight }}>
+        <div className="hero-carousel grid grid-cols-1 md:grid-cols-2 items-center" style={{ minHeight: minHeight || 'auto' }}>
           {/* Slides */}
-          <div className="relative col-span-1 md:col-span-2 h-full">
+          <div className="relative col-span-1 md:col-span-2 h-[400px] md:h-full">
             {slides.map((s, i) => (
               <div
                 key={s.id}
@@ -80,7 +80,12 @@ export default function Hero() {
                 }`}
                 aria-hidden={i === index ? "false" : "true"}
               >
-                <img src={s.image} alt={s.headline} className="absolute inset-0 w-full h-full object-cover" />
+                <img 
+                  src={s.image} 
+                  alt={s.headline} 
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="eager"
+                  sizes="100vw"
                 {/* lighter overlay so black text is readable */}
                 <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/30 to-transparent" />
               </div>
