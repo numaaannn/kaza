@@ -144,12 +144,12 @@ export const jewelryProducts: Product[] = [
 
 export const categories = [
   { id: 'rings', name: 'Rings', icon: '💍', image: '/silver-rings-collection.jpg', href: '/shop?category=rings' },
-  { id: 'necklaces', name: 'Necklaces', icon: '📿', image: '/silver-necklaces-collection.jpg', href: '/shop?category=necklaces' },
-  { id: 'earrings', name: 'Earrings', icon: '👂', image: '/silver-earrings-collection.jpg', href: '/shop?category=earrings' },
-  { id: 'bracelets', name: 'Bracelets', icon: '💫', image: '/silver-bracelets-collection.jpg', href: '/shop?category=bracelets' },
   { id: 'chains', name: 'Chains', icon: '⛓️', image: '/silver-chains-collection.jpg', href: '/shop?category=chains' },
-  { id: 'pendants', name: 'Pendants', icon: '💎', image: '/silver-pendants-collection.jpg', href: '/shop?category=pendants' },
+  { id: 'bracelets', name: 'Bracelets', icon: '💫', image: '/silver-bracelets-collection.jpg', href: '/shop?category=bracelets' },
+  { id: 'sets', name: 'Sets', icon: '🎁', image: '/silver-sets-collection.jpg', href: '/shop?category=sets' },
+  { id: 'earrings', name: 'Earrings', icon: '👂', image: '/silver-earrings-collection.jpg', href: '/shop?category=earrings' },
   { id: 'anklets', name: 'Anklets', icon: '🦶', image: '/silver-anklets-collection.jpg', href: '/shop?category=anklets' },
+  { id: 'pendants', name: 'Pendants', icon: '💎', image: '/silver-pendants-collection.jpg', href: '/shop?category=pendants' },
   { id: 'charms', name: 'Charms', icon: '🔖', image: '/silver-charms-collection.jpg', href: '/shop?category=charms' }
 ]
 

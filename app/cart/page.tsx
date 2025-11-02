@@ -1,6 +1,7 @@
-s"use client"
+"use client"
 
-import { useState } from "react"
+import { useState, useCallback, useMemo } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
@@ -35,22 +36,23 @@ const initialCart: CartItem[] = [
 export default function CartPage() {
   const [cartItems, setCartItems] = useState<CartItem[]>(initialCart)
 
-  const updateQuantity = (id: string, newQuantity: number) => {
+  const removeItem = useCallback((id: string) => {
+    setCartItems((prev) => prev.filter((item) => item.id !== id))
+  }, [])
+
+  const updateQuantity = useCallback((id: string, newQuantity: number) => {
     if (newQuantity <= 0) {
-      removeItem(id)
+      setCartItems((prev) => prev.filter((item) => item.id !== id))
       return
     }
-    setCartItems(cartItems.map((item) => (item.id === id ? { ...item, quantity: newQuantity } : item)))
-  }
 
-  const removeItem = (id: string) => {
-    setCartItems(cartItems.filter((item) => item.id !== id))
-  }
+    setCartItems((prev) => prev.map((item) => (item.id === id ? { ...item, quantity: newQuantity } : item)))
+  }, [])
 
-  const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
-  const shipping = subtotal > 5000 ? 0 : 200
-  const tax = Math.round(subtotal * 0.18)
-  const total = subtotal + shipping + tax
+  const subtotal = useMemo(() => cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0), [cartItems])
+  const shipping = useMemo(() => (subtotal > 5000 ? 0 : 200), [subtotal])
+  const tax = useMemo(() => Math.round(subtotal * 0.18), [subtotal])
+  const total = useMemo(() => subtotal + shipping + tax, [subtotal, shipping, tax])
 
   return (
     <main className="min-h-screen bg-background">
@@ -76,11 +78,13 @@ export default function CartPage() {
                     className="flex gap-4 p-4 border border-border rounded-lg hover:border-primary transition-colors"
                   >
                     {/* Product Image */}
-                    <div className="w-24 h-24 flex-shrink-0 bg-muted rounded-lg overflow-hidden">
-                      <img
+                    <div className="w-24 h-24 flex-shrink-0 bg-muted rounded-lg overflow-hidden relative">
+                      <Image
                         src={item.image || "/placeholder.svg"}
                         alt={item.name}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
+                        sizes="96px"
                       />
                     </div>
 
