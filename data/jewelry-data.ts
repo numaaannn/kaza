@@ -17,10 +17,10 @@ export const jewelryProducts: Product[] = [
   // Women's Collection
   {
     id: 'w001',
-    name: 'Radiant Diamond Solitaire Ring',
+    name: 'ring',
     category: 'rings',
     gender: 'women',
-    price: 125000,
+    price: 0,
     originalPrice: 145000,
     image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop',
     metal: 'diamond',
@@ -31,10 +31,10 @@ export const jewelryProducts: Product[] = [
   },
   {
     id: 'w002',
-    name: 'Eternal Love Necklace Set',
+    name: 'necklace',
     category: 'necklaces',
     gender: 'women',
-    price: 89000,
+    price: 0,
     image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=400&fit=crop',
     metal: 'gold',
     weight: '12.3g',
@@ -43,10 +43,10 @@ export const jewelryProducts: Product[] = [
   },
   {
     id: 'w003',
-    name: 'Pearl Drop Earrings',
+    name: 'earring',
     category: 'earrings',
     gender: 'women',
-    price: 45000,
+    price: 0,
     originalPrice: 52000,
     image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=400&fit=crop',
     metal: 'gold',
@@ -56,10 +56,10 @@ export const jewelryProducts: Product[] = [
   },
   {
     id: 'w004',
-    name: 'Royal Heritage Bangles',
+    name: 'bracelet',
     category: 'bracelets',
     gender: 'women',
-    price: 78000,
+    price: 0,
     image: 'https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400&h=400&fit=crop',
     metal: 'gold',
     weight: '25.6g',
@@ -68,10 +68,10 @@ export const jewelryProducts: Product[] = [
   },
   {
     id: 'w005',
-    name: 'Floral Diamond Pendant',
+    name: 'pendant',
     category: 'pendants',
     gender: 'women',
-    price: 95000,
+    price: 0,
     image: 'https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=400&h=400&fit=crop',
     metal: 'diamond',
     weight: '3.8g',
@@ -80,10 +80,10 @@ export const jewelryProducts: Product[] = [
   },
   {
     id: 'w006',
-    name: 'Contemporary Gold Chain',
+    name: 'chain',
     category: 'chains',
     gender: 'women',
-    price: 67000,
+    price: 0,
     image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=400&fit=crop',
     metal: 'gold',
     weight: '8.9g',
@@ -93,10 +93,10 @@ export const jewelryProducts: Product[] = [
   // Men's Collection
   {
     id: 'm001',
-    name: 'Executive Gold Ring',
+    name: 'ring',
     category: 'rings',
     gender: 'men',
-    price: 85000,
+    price: 0,
     originalPrice: 95000,
     image: 'https://images.unsplash.com/photo-1623874228601-f4193c7b5944?w=400&h=400&fit=crop',
     metal: 'gold',
@@ -106,10 +106,10 @@ export const jewelryProducts: Product[] = [
   },
   {
     id: 'm002',
-    name: 'Bold Statement Chain',
+    name: 'chain',
     category: 'chains',
     gender: 'men',
-    price: 120000,
+    price: 0,
     image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop',
     metal: 'gold',
     weight: '35.2g',
@@ -119,10 +119,10 @@ export const jewelryProducts: Product[] = [
   },
   {
     id: 'm003',
-    name: 'Classic Gold Bracelet',
+    name: 'bracelet',
     category: 'bracelets',
     gender: 'men',
-    price: 75000,
+    price: 0,
     image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop',
     metal: 'gold',
     weight: '18.4g',
@@ -130,10 +130,10 @@ export const jewelryProducts: Product[] = [
   },
   {
     id: 'm004',
-    name: 'Modern Platinum Ring',
+    name: 'ring',
     category: 'rings',
     gender: 'men',
-    price: 135000,
+    price: 0,
     image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop',
     metal: 'platinum',
     weight: '8.2g',
@@ -143,12 +143,14 @@ export const jewelryProducts: Product[] = [
 ]
 
 export const categories = [
-  { id: 'rings', name: 'Rings', icon: '💍' },
-  { id: 'necklaces', name: 'Necklaces', icon: '📿' },
-  { id: 'earrings', name: 'Earrings', icon: '👂' },
-  { id: 'bracelets', name: 'Bracelets', icon: '💫' },
-  { id: 'chains', name: 'Chains', icon: '⛓️' },
-  { id: 'pendants', name: 'Pendants', icon: '💎' }
+  { id: 'rings', name: 'Rings', icon: '💍', image: '/silver-rings-collection.jpg', href: '/shop?category=rings' },
+  { id: 'necklaces', name: 'Necklaces', icon: '📿', image: '/silver-necklaces-collection.jpg', href: '/shop?category=necklaces' },
+  { id: 'earrings', name: 'Earrings', icon: '👂', image: '/silver-earrings-collection.jpg', href: '/shop?category=earrings' },
+  { id: 'bracelets', name: 'Bracelets', icon: '💫', image: '/silver-bracelets-collection.jpg', href: '/shop?category=bracelets' },
+  { id: 'chains', name: 'Chains', icon: '⛓️', image: '/silver-chains-collection.jpg', href: '/shop?category=chains' },
+  { id: 'pendants', name: 'Pendants', icon: '💎', image: '/silver-pendants-collection.jpg', href: '/shop?category=pendants' },
+  { id: 'anklets', name: 'Anklets', icon: '🦶', image: '/silver-anklets-collection.jpg', href: '/shop?category=anklets' },
+  { id: 'charms', name: 'Charms', icon: '🔖', image: '/silver-charms-collection.jpg', href: '/shop?category=charms' }
 ]
 
 export const testimonials = [

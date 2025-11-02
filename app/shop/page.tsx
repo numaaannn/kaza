@@ -9,8 +9,8 @@ import { ChevronDown } from "lucide-react"
 const allProducts = [
   {
     id: "1",
-    name: "Minimalist Silver Ring",
-    price: 2499,
+    name: "Ring",
+    price: 0.0,
 image: "/custom-name-silver-ring.jpg",
     category: "Rings",
     rating: 4.8,
@@ -18,8 +18,8 @@ image: "/custom-name-silver-ring.jpg",
   },
   {
     id: "2",
-    name: "Delicate Silver Chain",
-    price: 3999,
+    name: "Chain",
+    price: 0.0,
     image: "/delicate-silver-chain.jpg",
     category: "Chains",
     rating: 4.9,
@@ -27,8 +27,8 @@ image: "/custom-name-silver-ring.jpg",
   },
   {
     id: "3",
-    name: "Pearl Silver Pendant",
-    price: 4499,
+    name: "Pendant",
+    price: 0.0,
 image: "/geometric-silver-pendant.jpg",
     category: "Pendants",
     rating: 4.7,
@@ -36,8 +36,8 @@ image: "/geometric-silver-pendant.jpg",
   },
   {
     id: "4",
-    name: "Geometric Silver Bracelet",
-    price: 3299,
+    name: "Bracelet",
+    price: 0.0,
     image: "/geometric-silver-bracelet.jpg",
     category: "Bracelets",
     rating: 4.6,
@@ -45,8 +45,8 @@ image: "/geometric-silver-pendant.jpg",
   },
   {
     id: "5",
-    name: "Custom Name Ring",
-    price: 2999,
+    name: "Ring",
+    price: 0.0,
     image: "/custom-name-silver-ring.jpg",
     category: "Rings",
     rating: 4.9,
@@ -54,8 +54,8 @@ image: "/geometric-silver-pendant.jpg",
   },
   {
     id: "6",
-    name: "Twisted Silver Bangle",
-    price: 3599,
+    name: "Bracelet",
+    price: 0.0,
 image: "/geometric-silver-bracelet.jpg",
     category: "Bracelets",
     rating: 4.7,
@@ -63,8 +63,8 @@ image: "/geometric-silver-bracelet.jpg",
   },
   {
     id: "7",
-    name: "Layered Silver Necklace",
-    price: 4299,
+    name: "Chain",
+    price: 0.0,
     image: "/delicate-silver-chain.jpg",
     category: "Chains",
     rating: 4.8,
@@ -72,8 +72,8 @@ image: "/geometric-silver-bracelet.jpg",
   },
   {
     id: "8",
-    name: "Moonstone Silver Pendant",
-    price: 5299,
+    name: "Pendant",
+    price: 0.0,
     image: "/pearl-silver-pendant.jpg",
     category: "Pendants",
     rating: 4.9,
@@ -81,7 +81,49 @@ image: "/geometric-silver-bracelet.jpg",
   },
 ]
 
-const categories = ["All", "Rings", "Chains", "Pendants", "Bracelets"]
+const categories = [
+  "All",
+  "Rings",
+  "Chains",
+  "Bracelets",
+  "Sets",
+  "Earrings",
+  "Anklets",
+  "Pendants",
+  "Charms",
+  "Custom Jewellry",
+]
+
+// ensure each real category (exclude "All") has 10 products by augmenting allProducts
+const _images: Record<string, string> = {
+  Rings: "/custom-name-silver-ring.jpg",
+  Chains: "/delicate-silver-chain.jpg",
+  Pendants: "/geometric-silver-pendant.jpg",
+  Bracelets: "/geometric-silver-bracelet.jpg",
+  Sets: "/set-placeholder.jpg",
+  Earrings: "/earrings-placeholder.jpg",
+  Anklets: "/anklet-placeholder.jpg",
+  Charms: "/charms-placeholder.jpg",
+  "Custom Jewelry": "/custom-placeholder.jpg",
+}
+
+categories
+  .filter((c) => c !== "All")
+  .forEach((category) => {
+    const existing = allProducts.filter((p) => p.category === category).length
+    for (let i = existing; i < 10; i++) {
+      const idx = i + 1
+      allProducts.push({
+        id: `${category.toLowerCase().replace(/\s+/g, "-")}-${idx}`,
+        name: `${category.replace(/s$/i, "")} ${idx}`,
+        price: 0.0,
+        image: _images[category] ?? "/placeholder.jpg",
+        category,
+        rating: +(4.5 + ((i % 5) * 0.1)).toFixed(1),
+        reviews: 10 + i * 5,
+      })
+    }
+  })
 const sortOptions = [
   { label: "Newest", value: "newest" },
   { label: "Price: Low to High", value: "price-asc" },

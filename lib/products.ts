@@ -50,13 +50,18 @@ export const GENDER_TYPES: Record<Gender, Category[]> = {
   men: ["rings", "studs", "bracelets", "chains", "cufflinks", "pendants", "sets"],
 }
 
+// Single "Elite" set that combines both previous gender lists (unique)
+export const ELITE_TYPES: Category[] = Array.from(
+  new Set([...(GENDER_TYPES.women || []), ...(GENDER_TYPES.men || [])])
+)
+
 // Example catalogue for integration and dynamic filters
 export const products: Product[] = [
   {
     id: "w-earring-1",
-    name: "Oxidized Jhumka Earrings",
+    name: "earring",
     category: "earrings",
-    price: 2299,
+    price: 0,
     image: "/oxidized-jhumka.jpg",
     images: ["/oxidized-jhumka.jpg"],
     description: "Traditional oxidized jhumkas with intricate carving.",
@@ -73,9 +78,9 @@ export const products: Product[] = [
   },
   {
     id: "w-necklace-1",
-    name: "Minimal Bar Necklace",
+    name: "necklace",
     category: "necklaces",
-    price: 3199,
+    price: 0,
     image: "/minimal-bar-necklace.jpg",
     images: ["/minimal-bar-necklace.jpg"],
     description: "Sleek bar pendant for everyday elegance.",
@@ -92,9 +97,9 @@ export const products: Product[] = [
   },
   {
     id: "w-bracelet-1",
-    name: "Gemstone Charm Bracelet",
+    name: "bracelet",
     category: "bracelets",
-    price: 4499,
+    price: 0,
     image: "/gemstone-charm-bracelet.jpg",
     images: ["/gemstone-charm-bracelet.jpg"],
     description: "Delicate bracelet accented with colored gemstones.",
@@ -110,9 +115,9 @@ export const products: Product[] = [
   },
   {
     id: "w-ring-1",
-    name: "Stackable Midi Ring",
+    name: "ring",
     category: "rings",
-    price: 1999,
+    price: 0,
     image: "/stacked-silver-rings.jpg",
     images: ["/stacked-silver-rings.jpg"],
     description: "Set of slim stackable rings for layered looks.",
@@ -129,9 +134,9 @@ export const products: Product[] = [
   },
   {
     id: "w-anklet-1",
-    name: "Beaded Silver Anklet",
+    name: "anklet",
     category: "anklets",
-    price: 2799,
+    price: 0,
     image: "/beaded-silver-anklet.jpg",
     images: ["/beaded-silver-anklet.jpg"],
     description: "Playful anklet with silver beads.",
@@ -147,9 +152,9 @@ export const products: Product[] = [
   },
   {
     id: "w-bangle-1",
-    name: "Hammered Silver Bangle",
+    name: "bangle",
     category: "bangles",
-    price: 5299,
+    price: 0,
     image: "/hammered-silver-bangle.jpg",
     images: ["/hammered-silver-bangle.jpg"],
     description: "Statement bangle with hammered texture.",
@@ -165,9 +170,9 @@ export const products: Product[] = [
   },
   {
     id: "w-pendant-1",
-    name: "Floral Gem Pendant",
+    name: "pendant",
     category: "pendants",
-    price: 3399,
+    price: 0,
     image: "/silver-pearl-pendant.jpg",
     images: ["/silver-pearl-pendant.jpg"],
     description: "Elegant floral motif with gemstone center.",
@@ -183,9 +188,9 @@ export const products: Product[] = [
   },
   {
     id: "w-set-1",
-    name: "Pendant and Studs Set",
+    name: "set",
     category: "sets",
-    price: 7499,
+    price: 0,
     image: "/silver-set-pendant-studs.jpg",
     images: ["/silver-set-pendant-studs.jpg"],
     description: "Coordinated pendant with matching studs.",
@@ -202,9 +207,9 @@ export const products: Product[] = [
   },
   {
     id: "m-ring-1",
-    name: "Bold Signet Ring",
+    name: "ring",
     category: "rings",
-    price: 5999,
+    price: 0,
     image: "/bold-signet-ring.jpg",
     images: ["/bold-signet-ring.jpg"],
     description: "Classic signet ring with a polished finish.",
@@ -221,9 +226,9 @@ export const products: Product[] = [
   },
   {
     id: "m-studs-1",
-    name: "Minimal Stud Earrings",
+    name: "stud",
     category: "studs",
-    price: 1699,
+    price: 0,
     image: "/minimal-studs.jpg",
     images: ["/minimal-studs.jpg"],
     description: "Simple silver studs for understated style.",
@@ -239,9 +244,9 @@ export const products: Product[] = [
   },
   {
     id: "m-bracelet-1",
-    name: "Box Link Bracelet",
+    name: "bracelet",
     category: "bracelets",
-    price: 6499,
+    price: 0,
     image: "/box-link-bracelet.jpg",
     images: ["/box-link-bracelet.jpg"],
     description: "Sturdy box link bracelet for everyday wear.",
@@ -257,9 +262,9 @@ export const products: Product[] = [
   },
   {
     id: "m-chain-1",
-    name: "Figaro Chain",
+    name: "chain",
     category: "chains",
-    price: 7199,
+    price: 0,
     image: "/delicate-silver-chain.jpg",
     images: ["/delicate-silver-chain.jpg"],
     description: "Classic Figaro chain in 20-inch length.",
@@ -275,9 +280,9 @@ export const products: Product[] = [
   },
   {
     id: "m-cufflinks-1",
-    name: "Geometric Cufflinks",
+    name: "cufflink",
     category: "cufflinks",
-    price: 4599,
+    price: 0,
     image: "/geometric-cufflinks.jpg",
     images: ["/geometric-cufflinks.jpg"],
     description: "Angular cufflinks with brushed finish.",
@@ -293,9 +298,9 @@ export const products: Product[] = [
   },
   {
     id: "m-pendant-1",
-    name: "Dog Tag Pendant",
+    name: "pendant",
     category: "pendants",
-    price: 3899,
+    price: 0,
     image: "/dog-tag-pendant.jpg",
     images: ["/dog-tag-pendant.jpg"],
     description: "Minimal dog tag pendant with optional engraving.",
@@ -311,9 +316,9 @@ export const products: Product[] = [
   },
   {
     id: "custom-1",
-    name: "Custom Name Ring",
+    name: "custom",
     category: "custom",
-    price: 7999,
+    price: 0,
     image: "/custom-name-silver-ring.jpg",
     images: [
       "/custom-name-ring-front.jpg",

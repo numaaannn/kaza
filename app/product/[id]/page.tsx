@@ -10,8 +10,8 @@ import ProductCard from "@/components/product-card"
 const productDetails: Record<string, any> = {
   "1": {
     id: "1",
-    name: "Minimalist Silver Ring",
-    price: 2499,
+    name: "Ring",
+    price: 0,
     originalPrice: 2999,
     image: "/minimalist-silver-ring.jpg",
     category: "Rings",
@@ -30,8 +30,8 @@ const productDetails: Record<string, any> = {
   },
   "2": {
     id: "2",
-    name: "Delicate Silver Chain",
-    price: 3999,
+    name: "Chain",
+    price: 0,
     originalPrice: 4499,
     image: "/delicate-silver-chain.jpg",
     category: "Chains",
@@ -53,8 +53,8 @@ const productDetails: Record<string, any> = {
 const relatedProducts = [
   {
     id: "3",
-    name: "Pearl Silver Pendant",
-    price: 4499,
+    name: "Pendant",
+    price: 0,
     image: "/pearl-silver-pendant.jpg",
     category: "Pendants",
     rating: 4.7,
@@ -62,8 +62,8 @@ const relatedProducts = [
   },
   {
     id: "4",
-    name: "Geometric Silver Bracelet",
-    price: 3299,
+    name: "Bracelet",
+    price: 0,
     image: "/geometric-silver-bracelet.jpg",
     category: "Bracelets",
     rating: 4.6,
@@ -71,8 +71,8 @@ const relatedProducts = [
   },
   {
     id: "5",
-    name: "Custom Name Ring",
-    price: 2999,
+    name: "Ring",
+    price: 0,
     image: "/custom-name-silver-ring.jpg",
     category: "Rings",
     rating: 4.9,

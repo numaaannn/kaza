@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, CONTACT_WHATSAPP_URL } from "@/lib/site-info"
 import { Button } from "@/components/ui/button"
 
 export default function ContactPage() {
@@ -93,6 +94,19 @@ export default function ContactPage() {
               {status === "error" && <span className="text-red-600">{error}</span>}
             </div>
           </form>
+
+          <div className="mt-10 grid md:grid-cols-2 gap-6 items-center">
+            <div className="p-6 border border-border rounded-md">
+              <h3 className="font-semibold mb-2">Other ways to reach us</h3>
+              <p className="text-sm mb-2">Email: <a className="text-accent underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+              <p className="text-sm mb-2">Phone: <a className="text-accent underline" href={`tel:${CONTACT_PHONE_TEL}`}>{CONTACT_PHONE_DISPLAY}</a></p>
+              <p className="text-sm">WhatsApp: <a className="text-accent underline" href={CONTACT_WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a></p>
+            </div>
+            <div className="p-6">
+              <h3 className="font-semibold mb-2">Support hours</h3>
+              <p className="text-sm">Mon–Fri: 9:00 AM — 6:00 PM IST</p>
+            </div>
+          </div>
         </div>
       </section>
 

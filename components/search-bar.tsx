@@ -11,7 +11,7 @@ export default function SearchBar({ onClose }: { onClose?: () => void }) {
   const submit = (e: React.FormEvent) => {
     e.preventDefault()
     const query = q.trim()
-    if (query.length > 0) router.push(`/collections?q=${encodeURIComponent(query)}`)
+    if (query.length > 0) router.push(`/shop?q=${encodeURIComponent(query)}`)
     onClose?.()
   }
 

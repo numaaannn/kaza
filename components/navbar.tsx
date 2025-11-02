@@ -16,7 +16,7 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Shop", href: "/shop" },
-    { label: "Collections", href: "/collections" },
+    { label: "Custom Jewelry", href: "/custom-jewelry" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ]

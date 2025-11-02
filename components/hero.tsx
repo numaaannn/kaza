@@ -97,9 +97,9 @@ export default function Hero() {
               <p className="mt-4 text-lg text-black/80 max-w-xl">{slides[index].subtext}</p>
 
               <div className="mt-8">
-                <Link href="/collections">
+                <Link href="/shop">
                   <Button size="lg" className="bg-black text-white px-6 py-3 rounded-md shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5">
-                    Explore Collections
+                    Shop Now
                   </Button>
                 </Link>
               </div>

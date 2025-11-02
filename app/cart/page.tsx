@@ -1,4 +1,4 @@
-"use client"
+s"use client"
 
 import { useState } from "react"
 import Link from "next/link"
@@ -18,15 +18,15 @@ interface CartItem {
 const initialCart: CartItem[] = [
   {
     id: "1",
-    name: "Minimalist Silver Ring",
-    price: 2499,
+    name: "Rings",
+    price: 0,
     quantity: 1,
     image: "/minimalist-silver-ring.jpg",
   },
   {
     id: "2",
-    name: "Delicate Silver Chain",
-    price: 3999,
+    name: "Chains",
+    price: 0,
     quantity: 2,
     image: "/delicate-silver-chain.jpg",
   },

@@ -1,43 +1,5 @@
 import Link from "next/link"
-
-const categories: { id: number; name: string; image: string; href: string }[] = [
-  {
-    id: 1,
-    name: "Rings",
-    image: "/silver-rings-collection.jpg",
-    href: "/shop?category=rings",
-  },
-  {
-    id: 2,
-    name: "Chains",
-    image: "/silver-chains-collection.jpg",
-    href: "/shop?category=chains",
-  },
-  {
-    id: 3,
-    name: "Pendants",
-    image: "/silver-pendants-collection.jpg",
-    href: "/shop?category=pendants",
-  },
-  {
-    id: 4,
-    name: "Bracelets",
-    image: "/silver-bracelets-collection.jpg",
-    href: "/shop?category=bracelets",
-  },
-  {
-    id: 5,
-    name: "Earrings",
-    image: "/silver-earrings-collection.jpg",
-    href: "/shop?category=earrings",
-  },
-  {
-    id: 6,
-    name: "Custom Jewelry",
-    image: "/silver-custom-collection.jpg",
-    href: "/shop?category=custom-jewelry",
-  },
-]
+import { categories as categoryList } from "@/data/jewelry-data"
 
 export default function CategoryGrid() {
   return (
@@ -45,11 +7,11 @@ export default function CategoryGrid() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 animate-slide-up">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">Shop by Category</h2>
-          <p className="text-muted-foreground text-lg">Explore our curated collections of timeless silver jewellery</p>
+          <p className="text-muted-foreground text-lg">Explore our curated selection of timeless silver jewellery</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {categories.map((category, index) => (
+          {categoryList.map((category, index) => (
             <Link key={category.id} href={category.href}>
               <div
                 className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer stagger-item hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
@@ -63,7 +25,7 @@ export default function CategoryGrid() {
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center">
                   <div className="text-center">
                     <h3 className="text-2xl font-bold text-white mb-2">{category.name}</h3>
-                    <p className="text-white/80 text-sm">Explore Collection</p>
+                    <p className="text-white/80 text-sm">Explore</p>
                   </div>
                 </div>
               </div>
