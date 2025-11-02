@@ -93,18 +93,19 @@ export default function Hero() {
             ))}
           </div>
 
-          {/* Content (left-aligned) with black text */}
+          {/* Content (left-aligned) - use theme-aware foreground colors instead of hard-coded black */}
           <div className="col-span-1 px-6 md:px-12 lg:px-20 z-20">
-            <div className="max-w-xl text-left text-black h-full flex flex-col justify-center">
+            <div className="max-w-xl text-left text-foreground h-full flex flex-col justify-center">
               <p className="text-sm font-semibold uppercase tracking-widest opacity-90">KAZA Jewellery</p>
               <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
                 {slides[index].headline}
               </h2>
-              <p className="mt-4 text-lg text-black/80 max-w-xl">{slides[index].subtext}</p>
+              <p className="mt-4 text-lg text-foreground opacity-80 max-w-xl">{slides[index].subtext}</p>
 
               <div className="mt-8">
                 <Link href="/shop">
-                  <Button size="lg" className="bg-black text-white px-6 py-3 rounded-md shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5">
+                  {/* Button uses foreground/background vars so it adapts to light/dark automatically */}
+                  <Button size="lg" className="bg-foreground text-background px-6 py-3 rounded-md shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5">
                     Shop Now
                   </Button>
                 </Link>
@@ -117,13 +118,13 @@ export default function Hero() {
             <div className="flex flex-col items-end gap-4">
               <div className="flex gap-3">
               {slides.map((_, i) => (
-                <button key={i} onClick={() => setIndex(i)} aria-label={`Go to slide ${i + 1}`} className={`w-3 h-3 rounded-full transition-all duration-300 ${i === index ? "bg-black scale-110" : "bg-black/40"}`} />
+                <button key={i} onClick={() => setIndex(i)} aria-label={`Go to slide ${i + 1}`} className={`w-3 h-3 rounded-full transition-all duration-300 ${i === index ? "bg-foreground scale-110" : "bg-foreground opacity-40"}`} />
               ))}
               </div>
 
-              <div className="flex gap-3 items-center text-black/80">
-              <button onClick={() => setIndex((i) => (i - 1 + slides.length) % slides.length)} aria-label="Previous slide" className="px-3 py-2 border border-black/30 rounded-md hover:bg-black/5">‹</button>
-              <button onClick={() => setIndex((i) => (i + 1) % slides.length)} aria-label="Next slide" className="px-3 py-2 border border-black/30 rounded-md hover:bg-black/5">›</button>
+              <div className="flex gap-3 items-center text-foreground opacity-80">
+              <button onClick={() => setIndex((i) => (i - 1 + slides.length) % slides.length)} aria-label="Previous slide" className="px-3 py-2 border border-border rounded-md hover:bg-muted">‹</button>
+              <button onClick={() => setIndex((i) => (i + 1) % slides.length)} aria-label="Next slide" className="px-3 py-2 border border-border rounded-md hover:bg-muted">›</button>
               </div>
             </div>
             </div>
