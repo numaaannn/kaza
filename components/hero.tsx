@@ -86,6 +86,7 @@ export default function Hero() {
                   className="absolute inset-0 w-full h-full object-cover"
                   loading="eager"
                   sizes="100vw"
+                />
                 {/* lighter overlay so black text is readable */}
                 <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/30 to-transparent" />
               </div>
