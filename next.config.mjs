@@ -7,10 +7,7 @@
  * Main configuration object for Next.js
  */
 const nextConfig = {
-  // ESLint configuration for build process
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+
   // TypeScript configuration for build process
   typescript: {
     ignoreBuildErrors: true,
@@ -21,8 +18,11 @@ const nextConfig = {
   },
   // Experimental features
   experimental: {
-    outputFileTracingRoot: process.cwd(), // Explicitly set workspace root to silence warning
+    // (no experimental flags required currently)
   },
+
+  // Output tracing root moved to top-level (preferred) to avoid invalid config warnings
+  outputFileTracingRoot: process.cwd(),
 }
 
 export default nextConfig
