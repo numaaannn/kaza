@@ -8,7 +8,7 @@ export default function BrandStory() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="order-2 md:order-1">
-            <img src="/artisan-crafting-silver-jewelry.jpg" alt="KAZA Artisan Craftsmanship" className="w-full rounded-lg" />
+            <img src="/artisan-crafting-silver-jewelry.jpg" alt="Numaans Silver Shop Artisan Craftsmanship" className="w-full rounded-lg" />
           </div>
 
           {/* Content */}
@@ -19,7 +19,7 @@ export default function BrandStory() {
                 Crafted with Passion, Worn with Pride
               </h2>
               <p className="text-muted-foreground leading-relaxed text-pretty">
-                KAZA was born from a vision to create timeless silver jewellery that celebrates individuality and
+                Numaans Silver Shop was born from a vision to create timeless silver jewellery that celebrates individuality and
                 minimalist elegance. Each piece is handcrafted by skilled artisans using pure 925 silver, ensuring
                 quality and durability that lasts a lifetime.
               </p>

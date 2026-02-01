@@ -39,7 +39,7 @@ export default function InstagramStrip() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2 text-balance">Follow Us on Instagram</h2>
-          <p className="text-muted-foreground mb-6">@kazajewellery</p>
+          <p className="text-muted-foreground mb-6">@numaanssilvershop</p>
           <Link
             href="https://instagram.com"
             target="_blank"

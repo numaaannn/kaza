@@ -28,7 +28,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <span className="text-2xl font-bold text-foreground tracking-wider hover:text-primary transition-colors duration-300">
-              KAZA
+              Numaans Silver Shop
             </span>
           </Link>
 

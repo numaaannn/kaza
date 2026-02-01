@@ -16,7 +16,7 @@ export default function CartDrawer() {
     if (items.length === 0) return "#"
     const phone = process.env.NEXT_PUBLIC_WHATSAPP_PHONE || ""
     const lines = [
-      "Hi KAZA, I'd like to buy these items:",
+      "Hi Numaans Silver Shop, I'd like to buy these items:",
       ...items.map((i) => `- ${i.name} x${i.qty} — ₹${(i.price * i.qty).toLocaleString()}`),
       `Total: ₹${subtotal.toLocaleString()}`,
       "Please guide me through the purchase.",

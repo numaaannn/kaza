@@ -7,7 +7,7 @@
   /* Fallbacks for browsers without OKLCH support */
   --background: #ffffff;
   --foreground: #111827;
-  /* KAZA Brand Colors - Light Mode (preferred, when supported) */
+  /* Numaans Silver Shop Brand Colors - Light Mode (preferred, when supported) */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -47,7 +47,7 @@
   /* Fallbacks for browsers without OKLCH support */
   --background: #0b1220;
   --foreground: #ffffff;
-  /* KAZA Brand Colors - Dark Mode (preferred, when supported) */
+  /* Numaans Silver Shop Brand Colors - Dark Mode (preferred, when supported) */
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.145 0 0);

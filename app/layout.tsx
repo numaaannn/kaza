@@ -9,9 +9,9 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
 export const metadata: Metadata = {
-  title: "KAZA – Timeless 925 Silver Jewellery | Rings, Chains & Pendants",
+  title: "Numaans Silver Shop",
   description:
-    "Discover KAZA's collection of pure 925 sterling silver jewellery. Shop minimalist rings, delicate chains, elegant pendants, and custom name jewellery. Handcrafted for the modern you.",
+    "Discover Numaans Silver Shop's collection of pure 925 sterling silver jewellery. Shop minimalist rings, delicate chains, elegant pendants, and custom name jewellery. Handcrafted for the modern you.",
   keywords: [
     "925 silver jewellery",
     "sterling silver rings",
@@ -23,23 +23,23 @@ export const metadata: Metadata = {
   ],
   generator: "v0.app",
   openGraph: {
-    title: "KAZA – Timeless 925 Silver Jewellery",
+    title: "Numaans Silver Shop – Timeless 925 Silver Jewellery",
     description:
       "Pure 925 sterling silver jewellery crafted for the modern you. Discover minimal rings, chains, pendants, and custom designs.",
     type: "website",
-    url: "https://kaza-jewellery.com",
+    url: "https://numaanssilvershop.com",
     images: [
       {
         url: "/placeholder.svg?height=1200&width=1200",
         width: 1200,
         height: 1200,
-        alt: "KAZA Silver Jewellery Collection",
+        alt: "Numaans Silver Shop Silver Jewellery Collection",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "KAZA – Timeless 925 Silver Jewellery",
+    title: "Numaans Silver Shop – Timeless 925 Silver Jewellery",
     description: "Pure 925 sterling silver jewellery crafted for the modern you.",
     images: ["/placeholder.svg?height=1200&width=1200"],
   },
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://kaza-jewellery.com",
+    canonical: "https://numaanssilvershop.com",
   },
 }
 
@@ -75,7 +75,7 @@ export default function RootLayout({
         >
           {/* Global providers */}
           {/* CartProvider manages cart state and persistence */}
-          <CartProvider>
+          <CartProvider children={undefined}>
             {children}
             <Analytics />
           </CartProvider>

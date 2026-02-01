@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/admin", "/api", "/checkout"],
     },
-    sitemap: "https://kaza-jewellery.com/sitemap.xml",
+    sitemap: "https://numaanssilvershop.com/sitemap.xml",
   }
 }

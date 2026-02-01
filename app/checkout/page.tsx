@@ -309,7 +309,7 @@ export default function CheckoutPage() {
                     Thank you for your purchase. Your order has been placed successfully.
                   </p>
                   <p className="text-sm text-muted-foreground mb-8">
-                    Order ID: <span className="font-semibold text-foreground">#KAZA-2024-001234</span>
+                    Order ID: <span className="font-semibold text-foreground">#NUMAANS-2024-001234</span>
                   </p>
                   <p className="text-muted-foreground mb-8">
                     A confirmation email has been sent to{" "}

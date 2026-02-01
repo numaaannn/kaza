@@ -10,7 +10,7 @@ const testimonials = [
     name: "Priya Sharma",
     role: "Fashion Enthusiast",
     content:
-      "KAZA jewellery is absolutely stunning! The quality is exceptional and the designs are so elegant. I've received countless compliments on my purchases.",
+      "Numaans Silver Shop jewellery is absolutely stunning! The quality is exceptional and the designs are so elegant. I've received countless compliments on my purchases.",
     rating: 5,
     image: "/woman-avatar.png",
   },
@@ -28,7 +28,7 @@ const testimonials = [
     name: "Ananya Gupta",
     role: "Wedding Planner",
     content:
-      "I recommend KAZA to all my clients. The silver jewellery is perfect for both everyday wear and special occasions. Truly timeless pieces.",
+      "I recommend Numaans Silver Shop to all my clients. The silver jewellery is perfect for both everyday wear and special occasions. Truly timeless pieces.",
     rating: 5,
     image: "/woman-avatar-2.png",
   },
@@ -53,7 +53,7 @@ export default function TestimonialSlider() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">What Our Customers Say</h2>
-          <p className="text-muted-foreground text-lg">Join thousands of satisfied customers who love KAZA</p>
+          <p className="text-muted-foreground text-lg">Join thousands of satisfied customers who love Numaans Silver Shop</p>
         </div>
 
         <div className="relative">

@@ -96,7 +96,7 @@ export default function Hero() {
           {/* Content (left-aligned) - use theme-aware foreground colors instead of hard-coded black */}
           <div className="col-span-1 px-6 md:px-12 lg:px-20 z-20">
             <div className="max-w-xl text-left text-foreground h-full flex flex-col justify-center">
-              <p className="text-sm font-semibold uppercase tracking-widest opacity-90">KAZA Jewellery</p>
+              <p className="text-sm font-semibold uppercase tracking-widest opacity-90">Numaans Silver Shop Jewellery</p>
               <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
                 {slides[index].headline}
               </h2>
