@@ -22,6 +22,11 @@ export const metadata: Metadata = {
     "handcrafted silver",
   ],
   generator: "v0.app",
+  icons: {
+    icon: "/site-logo.png",
+    shortcut: "/site-logo.png",
+    apple: "/site-logo.png",
+  },
   openGraph: {
     title: "Numaans Silver Shop – Timeless 925 Silver Jewellery",
     description:
@@ -30,10 +35,10 @@ export const metadata: Metadata = {
     url: "https://numaanssilvershop.com",
     images: [
       {
-        url: "/placeholder.svg?height=1200&width=1200",
+        url: "/site-logo.png",
         width: 1200,
         height: 1200,
-        alt: "Numaans Silver Shop Silver Jewellery Collection",
+        alt: "Numaans Silver Shop",
       },
     ],
   },
@@ -41,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Numaans Silver Shop – Timeless 925 Silver Jewellery",
     description: "Pure 925 sterling silver jewellery crafted for the modern you.",
-    images: ["/placeholder.svg?height=1200&width=1200"],
+    images: ["/site-logo.png"],
   },
   robots: {
     index: true,

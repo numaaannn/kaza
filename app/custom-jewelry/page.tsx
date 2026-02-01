@@ -12,7 +12,7 @@ export default function CustomJewelryPage() {
         <div className="relative h-[70vh] w-full overflow-hidden">
           <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-background to-background/95">
             <div className="w-full h-full flex items-center justify-center p-6">
-              <img src="/logo.png" alt="Numaans Silver Shop Emblem" className="object-contain w-48 h-48 md:w-64 md:h-64 opacity-95" loading="eager" />
+              <img src="/site-logo.png" alt="Numaans Silver Shop Emblem" className="object-contain w-48 h-48 md:w-64 md:h-64 opacity-95" loading="eager" />
             </div>
           </div>
           <div className="absolute inset-0 flex items-center justify-center">
@@ -51,7 +51,7 @@ export default function CustomJewelryPage() {
             <div className="grid md:grid-cols-3 gap-8 mb-20">
               <div className="relative h-96 rounded-xl overflow-hidden">
                 <div className="w-full h-full bg-muted/50 flex items-center justify-center p-6">
-                  <img src="/logo.png" alt="Custom Silver Design Process" className="object-contain w-32 h-32" loading="eager" />
+                  <img src="/site-logo.png" alt="Custom Silver Design Process" className="object-contain w-32 h-32" loading="eager" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
                   <div className="text-white">
@@ -62,7 +62,7 @@ export default function CustomJewelryPage() {
               </div>
               <div className="relative h-96 rounded-xl overflow-hidden">
                 <div className="w-full h-full bg-muted/50 flex items-center justify-center p-6">
-                  <img src="/logo.png" alt="CAM Production Process" className="object-contain w-32 h-32" loading="eager" />
+                  <img src="/site-logo.png" alt="CAM Production Process" className="object-contain w-32 h-32" loading="eager" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
                   <div className="text-white">
@@ -73,7 +73,7 @@ export default function CustomJewelryPage() {
               </div>
               <div className="relative h-96 rounded-xl overflow-hidden">
                 <div className="w-full h-full bg-muted/50 flex items-center justify-center p-6">
-                  <img src="/logo.png" alt="Expert Finishing" className="object-contain w-32 h-32" loading="eager" />
+                  <img src="/site-logo.png" alt="Expert Finishing" className="object-contain w-32 h-32" loading="eager" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
                   <div className="text-white">
@@ -90,12 +90,12 @@ export default function CustomJewelryPage() {
             <h2 className="text-4xl font-bold text-center mb-12">Elite Custom Creations</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                "/logo.png",
-                "/logo.png",
-                "/logo.png",
-                "/logo.png",
-                "/logo.png",
-                "/logo.png"
+                "/site-logo.png",
+                "/site-logo.png",
+                "/site-logo.png",
+                "/site-logo.png",
+                "/site-logo.png",
+                "/site-logo.png"
               ].map((src, index) => (
                 <div key={index} className="group relative h-80 rounded-xl overflow-hidden">
                   <div className="w-full h-full bg-muted/50 flex items-center justify-center p-6">
