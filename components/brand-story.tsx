@@ -6,9 +6,11 @@ export default function BrandStory() {
     <section className="py-16 md:py-24 bg-muted">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Image */}
+          {/* Image (replaced with About emblem) */}
           <div className="order-2 md:order-1">
-            <img src="/artisan-crafting-silver-jewelry.jpg" alt="Numaans Silver Shop Artisan Craftsmanship" className="w-full rounded-lg" />
+            <div className="w-full rounded-lg overflow-hidden bg-muted/50 flex items-center justify-center p-6">
+              <img src="/icons/about.svg" alt="Numaans Silver Shop Artisan Emblem" className="w-full h-full object-contain" loading="eager" />
+            </div>
           </div>
 
           {/* Content */}

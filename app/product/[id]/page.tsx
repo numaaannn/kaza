@@ -13,7 +13,7 @@ const productDetails: Record<string, any> = {
     name: "Ring",
     price: 0,
     originalPrice: 2999,
-    image: "/minimalist-silver-ring.jpg",
+    image: "/icons/rings.svg",
     category: "Rings",
     rating: 4.8,
     reviews: 124,
@@ -26,14 +26,14 @@ const productDetails: Record<string, any> = {
       "Finish: Polished",
       "Hypoallergenic",
     ],
-    images: ["/minimalist-silver-ring.jpg", "/minimalist-silver-ring.jpg", "/minimalist-silver-ring.jpg"],
+    images: ["/icons/rings.svg", "/icons/rings.svg", "/icons/rings.svg"],
   },
   "2": {
     id: "2",
     name: "Chain",
     price: 0,
     originalPrice: 4499,
-    image: "/delicate-silver-chain.jpg",
+    image: "/icons/chains.svg",
     category: "Chains",
     rating: 4.9,
     reviews: 89,
@@ -46,7 +46,7 @@ const productDetails: Record<string, any> = {
       "Clasp: Lobster",
       "Hypoallergenic",
     ],
-    images: ["/delicate-silver-chain.jpg", "/delicate-silver-chain.jpg", "/delicate-silver-chain.jpg"],
+    images: ["/icons/chains.svg", "/icons/chains.svg", "/icons/chains.svg"],
   },
 }
 
@@ -55,7 +55,7 @@ const relatedProducts = [
     id: "3",
     name: "Pendant",
     price: 0,
-    image: "/pearl-silver-pendant.jpg",
+    image: "/icons/pendants.svg",
     category: "Pendants",
     rating: 4.7,
     reviews: 156,
@@ -64,7 +64,7 @@ const relatedProducts = [
     id: "4",
     name: "Bracelet",
     price: 0,
-    image: "/geometric-silver-bracelet.jpg",
+    image: "/icons/bracelets.svg",
     category: "Bracelets",
     rating: 4.6,
     reviews: 92,
@@ -73,7 +73,7 @@ const relatedProducts = [
     id: "5",
     name: "Ring",
     price: 0,
-    image: "/custom-name-silver-ring.jpg",
+    image: "/icons/rings.svg",
     category: "Rings",
     rating: 4.9,
     reviews: 203,
@@ -102,7 +102,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 <img
                   src={product.images[selectedImage] || product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain p-8"
                 />
               </div>
               <div className="grid grid-cols-4 gap-3">
@@ -117,7 +117,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                     <img
                       src={image || "/placeholder.svg"}
                       alt={`View ${index + 1}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain p-2"
                     />
                   </button>
                 ))}

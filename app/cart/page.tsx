@@ -22,14 +22,14 @@ const initialCart: CartItem[] = [
     name: "Rings",
     price: 0,
     quantity: 1,
-    image: "/minimalist-silver-ring.jpg",
+    image: "/icons/rings.svg",
   },
   {
     id: "2",
     name: "Chains",
     price: 0,
     quantity: 2,
-    image: "/delicate-silver-chain.jpg",
+    image: "/icons/chains.svg",
   },
 ]
 
@@ -83,7 +83,7 @@ export default function CartPage() {
                         src={item.image || "/placeholder.svg"}
                         alt={item.name}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                         sizes="96px"
                       />
                     </div>

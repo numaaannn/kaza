@@ -31,7 +31,7 @@ export default function ProductCard({ id, name, price, image, category, rating =
         <img
           src={image || "/placeholder.svg"}
           alt={name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-contain p-6 group-hover:scale-105 transition-transform duration-500"
         />
 
         {/* Overlay Actions */}

@@ -21,11 +21,15 @@ export default function AboutPage() {
             attention to detail.
           </p>
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <img
-              src="/artisan-hands-crafting-silver-jewellery.jpg"
-              alt="Numaans Silver Shop artisans crafting silver jewellery"
-              className="w-full rounded-lg object-cover"
-            />
+            <div className="w-full rounded-lg overflow-hidden bg-muted/50 flex items-center justify-center p-6">
+              <img
+                src="/icons/about.svg"
+                alt="Numaans Silver Shop artisans emblem"
+                className="w-full h-full object-contain"
+                role="img"
+                loading="eager"
+              />
+            </div>
             <div className="space-y-4">
               <h2 className="text-2xl font-semibold">What We Stand For</h2>
               <ul className="list-disc pl-5 space-y-2 text-muted-foreground">

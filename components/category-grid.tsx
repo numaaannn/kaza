@@ -20,7 +20,7 @@ export default function CategoryGrid() {
                 <img
                   src={category.image || "/placeholder.svg"}
                   alt={category.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-contain p-8 group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center">
                   <div className="text-center">
