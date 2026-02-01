@@ -26,10 +26,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
-            <span className="text-2xl font-bold text-foreground tracking-wider hover:text-primary transition-colors duration-300">
-              Numaans Silver Shop
-            </span>
+          <Link href="/" className="flex-shrink-0 flex items-center gap-3">
+            <img src="/logo.png" alt="Numaans Silver Shop" className="h-8 md:h-10 object-contain" />
+            <span className="hidden sm:inline text-xl font-bold text-foreground tracking-wider hover:text-primary transition-colors duration-300">Numaans Silver Shop</span>
           </Link>
 
           {/* Desktop Navigation */}

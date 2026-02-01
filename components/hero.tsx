@@ -83,52 +83,7 @@ export default function Hero() {
                 {/* Theme-aware background (no images) */}
                 <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/30 to-transparent dark:from-black/60 dark:via-black/40 dark:to-transparent" />
 
-                {/* decorative background text: stronger metallic treatment, separate light/dark gradients */}
-                <div aria-hidden="true" className="absolute inset-0 flex items-center justify-end pr-4 md:pr-12 pointer-events-none z-0">
-                  <div className="text-right select-none max-w-[48%]">
-                    {/* Light-mode metallic text (visible in light mode only) */}
-                    <span
-                      className="block font-extrabold leading-tight tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl bg-clip-text text-transparent drop-shadow-sm block dark:hidden"
-                      style={{
-                        background: 'linear-gradient(180deg, #ffffff 0%, #e6edf3 25%, #bfc8cf 55%, #9aa4ad 80%)',
-                        WebkitBackgroundClip: 'text'
-                      }}
-                    >
-                      Welcome
-                    </span>
 
-                    <span
-                      className="block font-extrabold leading-tight tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-1 bg-clip-text text-transparent drop-shadow-md block dark:hidden"
-                      style={{
-                        background: 'linear-gradient(180deg, #fbfcfd 0%, #dfe7ee 30%, #c7cfd6 60%, #a2aab1 100%)',
-                        WebkitBackgroundClip: 'text'
-                      }}
-                    >
-                      to Numaans Shop
-                    </span>
-
-                    {/* Dark-mode metallic text (visible in dark mode only) */}
-                    <span
-                      className="hidden dark:block font-extrabold leading-tight tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl bg-clip-text text-transparent drop-shadow-sm"
-                      style={{
-                        background: 'linear-gradient(180deg, #e9eef3 0%, #c6ccd3 30%, #9aa3aa 65%, #6e7880 100%)',
-                        WebkitBackgroundClip: 'text'
-                      }}
-                    >
-                      Welcome
-                    </span>
-
-                    <span
-                      className="hidden dark:block font-extrabold leading-tight tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-1 bg-clip-text text-transparent drop-shadow-md"
-                      style={{
-                        background: 'linear-gradient(180deg, #f0f5fa 0%, #d0d8df 30%, #9ea9b1 65%, #7b8087 100%)',
-                        WebkitBackgroundClip: 'text'
-                      }}
-                    >
-                      to Numaans Shop
-                    </span>
-                  </div>
-                </div>
 
                 {/* decorative subtle center mark to anchor the empty background */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">

@@ -23,7 +23,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="w-full rounded-lg overflow-hidden bg-muted/50 flex items-center justify-center p-6">
               <img
-                src="/icons/about.svg"
+                src="/logo.png"
                 alt="Numaans Silver Shop artisans emblem"
                 className="w-full h-full object-contain"
                 role="img"

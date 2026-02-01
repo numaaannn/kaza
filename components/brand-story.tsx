@@ -9,7 +9,7 @@ export default function BrandStory() {
           {/* Image (replaced with About emblem) */}
           <div className="order-2 md:order-1">
             <div className="w-full rounded-lg overflow-hidden bg-muted/50 flex items-center justify-center p-6">
-              <img src="/icons/about.svg" alt="Numaans Silver Shop Artisan Emblem" className="w-full h-full object-contain" loading="eager" />
+              <img src="/logo.png" alt="Numaans Silver Shop Artisan Emblem" className="w-full h-full object-contain" loading="eager" />
             </div>
           </div>
 
