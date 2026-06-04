@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { CartProvider } from "@/components/cart-provider"
 import { ThemeProvider } from "@/components/theme-provider"
+import ChatbotDrawer from "@/components/chatbot-drawer"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
@@ -80,8 +81,9 @@ export default function RootLayout({
         >
           {/* Global providers */}
           {/* CartProvider manages cart state and persistence */}
-          <CartProvider children={undefined}>
+          <CartProvider>
             {children}
+            <ChatbotDrawer />
             <Analytics />
           </CartProvider>
         </ThemeProvider>
